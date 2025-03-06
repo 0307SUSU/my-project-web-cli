@@ -179,7 +179,7 @@ UI 组件库——>element-plus
 
 ![alt text](/public/mdImage/image-6.png)
 
-<font color="#ffa631">`pnpm add element-plus --save-dev`</font>
+<font color="#ffa631"> `pnpm add element-plus --save-dev` </font>
 
 ![alt text](/public/mdImage/image-7.png)
 
