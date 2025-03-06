@@ -1,7 +1,7 @@
 {
   "name": "my-project-web-cli",
   "version": "1.0.0",
-  "description": "测试前端脚手架搭建",
+  "description": "前端脚手架搭建流程梳理总结",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
