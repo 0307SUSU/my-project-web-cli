@@ -1,0 +1,25 @@
+{
+  "name": "my-project-web-cli",
+  "version": "1.0.0",
+  "description": "测试前端脚手架搭建",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/compiler-sfc": "^3.5.13",
+    "element-plus": "^2.9.5",
+    "prettier": "3.5.3",
+    "sass": "^1.85.1",
+    "unocss": "66.1.0-beta.3",
+    "vite": "^6.2.0"
+  }
+}
