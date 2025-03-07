@@ -227,6 +227,10 @@ pnpm add --save-dev --save-exact prettier
 ```
 
 ![alt text](/public/mdImage/image-12.png)
+**安装插件：Prettier**
+![alt text](/public/mdImage/image-13.png)
+在设置中设置
+![alt text](/public/mdImage/image-14.png)
 
 **配置：**<font color="#ffa631">`.prettierrc`</font>
 
@@ -268,4 +272,35 @@ module.exports = {
 }
 ```
 
-**<font size="28px" color="#48c0a3">待续...</font>**
+**配置:**`.prettierignore`，排除不必要的文件
+```js
+*.svg
+package.json
+.DS_Store
+.eslintignore
+*.png
+*.toml
+.editorconfig
+.gitignore
+.prettierignore
+LICENSE
+.eslintcache
+*.lock
+yarn-error.log
+/build
+/public
+
+```
+**添加脚本：**
+> 配置完成后可在`package.json`文件中的`script`字段中配置可执行脚本
+有关脚本的配置会在后续单独讲解
+```json
+"script":{
+  "lint:prettier": "prettier --check \"src/**/*\" --end-of-line auto",
+  "prettier": "prettier -c --write \"src/**/*\""
+}
+```
+
+**配置：**`ESLint 代码规范校验`
+
+> 了解ESLint : 

@@ -4,7 +4,9 @@
   "description": "前端脚手架搭建流程梳理总结",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:prettier": "prettier --check \"src/**/*\" --end-of-line auto",
+    "prettier": "prettier -c --write \"src/**/*\""
   },
   "keywords": [],
   "author": "",
