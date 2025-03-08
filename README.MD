@@ -480,7 +480,8 @@ pnpm add stylelint -g
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-standard-scss" // 如果使用 SCSS
+    "stylelint-config-standard-scss", // 如果使用 SCSS
+    "stylelint-config-prettier"
   ],
   "rules": {
     "indentation": 2, // 自定义规则，例如缩进 2 空格
@@ -495,13 +496,14 @@ pnpm add stylelint -g
   ]
 }
 ```
-注意⚠：由于项目中使用了unocss，stylelint不支持，所以在配置重要忽略掉unocss检查，另外由于使用了prettier，为了兼容要安装`stylelint-config-prettier`
+注意⚠：由于项目中使用了unocss，stylelint不支持，所以在配置重要忽略掉unocss检查，另外由于使用了prettier，为了兼容要安装`stylelint-config-prettier`关闭所有与 Prettier 冲突的 Stylelint 规则，避免格式检查冲突。
+
 **添加运行命令：**
 
 ```json
 {
   "scripts": {
-    "lint:css": "stylelint '**/*.{css,scss}' --fix",
+    "lint:css": "stylelint 'src/**/*.{css,scss,vue}' --fix",
     "lint": "npm run lint:css"
   }
 }

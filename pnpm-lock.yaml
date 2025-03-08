@@ -48,6 +48,9 @@ importers:
       stylelint:
         specifier: ^16.15.0
         version: 16.15.0
+      stylelint-config-prettier:
+        specifier: ^9.0.5
+        version: 9.0.5(stylelint@16.15.0)
       stylelint-config-standard:
         specifier: ^37.0.0
         version: 37.0.0(stylelint@16.15.0)
@@ -1649,6 +1652,13 @@ packages:
   strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
+
+  stylelint-config-prettier@9.0.5:
+    resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    peerDependencies:
+      stylelint: '>= 11.x < 15'
 
   stylelint-config-recommended@15.0.0:
     resolution: {integrity: sha512-9LejMFsat7L+NXttdHdTq94byn25TD+82bzGRiV1Pgasl99pWnwipXS5DguTpp3nP1XjvLXVnEJIuYBfsRjRkA==}
@@ -3389,6 +3399,10 @@ snapshots:
       ansi-regex: 5.0.1
 
   strip-json-comments@3.1.1: {}
+
+  stylelint-config-prettier@9.0.5(stylelint@16.15.0):
+    dependencies:
+      stylelint: 16.15.0
 
   stylelint-config-recommended@15.0.0(stylelint@16.15.0):
     dependencies:
