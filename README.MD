@@ -383,3 +383,48 @@ public/test-data.json
   }
 }
 ```
+`EditorConfig 代码风格统一工具`
+
+> 介绍：EditorConfig 帮助维护多个开发者在不同编辑器和 IDE 上为同一项目工作时保持一致的编码风格。EditorConfig 项目包括用于定义编码风格的文件格式和一系列文本编辑器插件，这些插件使编辑器能够读取文件格式并遵循定义的风格。EditorConfig 文件易于阅读，并且与版本控制系统配合良好。
+
+**官网：** https://editorconfig.org/
+
+**插件安装：**
+
+![alt text](/public/mdImage/image-17.png)
+
+**依赖安装：**
+
+```bash
+npm install editorconfig --save-dev
+yarn add editorconfig --save-dev
+pnpm add editorconfig --save-dev
+```
+![alt text](/public/mdImage/image-18.png)
+**配置**`.editorconfig`
+
+> 支持的属性列表：https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+
+```
+root = true                         # 根目录的配置文件，编辑器会由当前目录向上查找，如果找到 `roor = true` 的文件，则不再查找
+
+[*]
+indent_style = space                # 空格缩进,可选"space"、"tab"
+indent_size = 4                     # 缩进空格为4个
+end_of_line = lf                    # 结尾换行符，可选"lf"、"cr"、"crlf"
+charset = utf-8                     # 文件编码是 utf-8
+trim_trailing_whitespace = true     # 不保留行末的空格
+insert_final_newline = true         # 文件末尾添加一个空行
+curly_bracket_next_line = false     # 大括号不另起一行
+spaces_around_operators = true      # 运算符两遍都有空格
+indent_brace_style = 1tbs           # 条件语句格式是 1tbs
+
+[*.js]                              # 对所有的 js 文件生效
+quote_type = single                 # 字符串使用单引号
+
+[*.{html,less,css,json}]            # 对所有 html, less, css, json 文件生效
+quote_type = double                 # 字符串使用双引号
+
+[package.json]                      # 对 package.json 生效
+indent_size = 2                     # 使用2个空格缩进
+```
