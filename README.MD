@@ -428,3 +428,96 @@ quote_type = double                 # 字符串使用双引号
 [package.json]                      # 对 package.json 生效
 indent_size = 2                     # 使用2个空格缩进
 ```
+
+`（stylelint）样式规范校验`
+> 介绍：一个强大的 CSS linter，帮助您避免错误并强制执行约定。
+
+**官网：**https://stylelint.io/
+
+**安装依赖：**
+
+```bash
+# 安装 stylelint 核心包
+npm install stylelint --save-dev
+yarn add stylelint --save-dev
+pnpm add stylelint --save-dev
+# 安装标准配置（推荐）
+npm install stylelint-config-standard --save-dev
+yarn add stylelint-config-standard --save-dev
+pnpm add stylelint-config-standard --save-dev
+# 如果使用 SCSS/Less，安装对应语法支持
+npm install stylelint-scss --save-dev
+yarn add stylelint-scss --save-dev
+pnpm add stylelint-scss --save-dev
+# 支持vue/react文件
+npm install postcss-html --save-dev
+yarn add postcss-html --save-dev
+pnpm add postcss-html --save-dev
+# 安装命令行工具（可选）属性排序插件
+npm install stylelint-order --save-dev
+yarn add stylelint-order --save-dev
+pnpm add stylelint-order --save-dev
+# 全局安装（不推荐，除非需要全局使用）
+npm install stylelint -g
+yarn add stylelint -g
+pnpm add stylelint -g
+```
+![alt text](/public/mdImage/image-20.png)
+**插件安装：**
+![alt text](/public/mdImage/image-19.png)
+在项目根目录创建 .vscode/settings.json：
+```json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+  "stylelint.validate": ["css", "scss", "vue"]
+}
+```
+**配置：**`.stylelintrc`
+
+```json
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss" // 如果使用 SCSS
+  ],
+  "rules": {
+    "indentation": 2, // 自定义规则，例如缩进 2 空格
+    "selector-class-pattern": null,// 关闭类名格式检查
+    "at-rule-no-unknown": [true, { "ignoreAtRules": ["unocss", "apply"] }]  // 忽略 UnoCSS 相关指令
+  },
+  "overrides": [
+    {
+      "files": ["**/*.vue"],
+      "customSyntax": "postcss-html" // 支持 Vue 文件中的样式块
+    }
+  ]
+}
+```
+注意⚠：由于项目中使用了unocss，stylelint不支持，所以在配置重要忽略掉unocss检查，另外由于使用了prettier，为了兼容要安装`stylelint-config-prettier`
+**添加运行命令：**
+
+```json
+{
+  "scripts": {
+    "lint:css": "stylelint '**/*.{css,scss}' --fix",
+    "lint": "npm run lint:css"
+  }
+}
+```
+**配置排除项文件：**`.stylelintignore`
+
+```
+dist/
+**/*.js
+node_modules
+public/
+vite.config.js
+
+```
+
+
+`代码提交校验（Git Hook）`
+
+`Commit Message 规范`

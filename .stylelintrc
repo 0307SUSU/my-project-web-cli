@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss" // 如果使用 SCSS
+  ],
+  "rules": {
+    // "indentation": 2, // 自定义规则，例如缩进 2 空格
+    "selector-class-pattern": null,// 关闭类名格式检查
+    "at-rule-no-unknown": [true, { "ignoreAtRules": ["unocss", "apply"] }]  // 忽略 UnoCSS 相关指令
+  },
+  "overrides": [
+    {
+      "files": ["**/*.vue"],
+      "customSyntax": "postcss-html" // 支持 Vue 文件中的样式块
+    }
+  ]
+}
