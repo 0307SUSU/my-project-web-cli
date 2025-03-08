@@ -85,51 +85,51 @@
 - 执行命令`npm init`
   ![alt text](/public/mdImage/image-1.png)
 
-    > 命令执行完毕后出现了如下几个选项：
-    >
-    > 项目名称：默认文件夹名称
-    >
-    > package name: (my-project-web-cli)
-    >
-    > 版本号：默认 1.0.0
-    >
-    > version: (1.0.0)
-    >
-    > 项目描述：可以不写也可以简单描述
-    >
-    > description: 测试初始化项目
-    >
-    > 项目入口文件：默认 index.js,可以根据自身需求更改
-    >
-    > entry point: (index.js) main.js
-    >
-    > 测试命令：可忽略
-    >
-    > test command:
-    >
-    > git 存储库地址：可忽略
-    >
-    > git repository:
-    >
-    > 关键字：可忽略
-    >
-    > keywords:
-    >
-    > 作者：可忽略
-    >
-    > author:
-    >
-    > 许可证：默认 isc
-    >
-    > license: (ISC)
-    >
-    > 上述选项可选填，一路回车
+  > 命令执行完毕后出现了如下几个选项：
+  >
+  > 项目名称：默认文件夹名称
+  >
+  > package name: (my-project-web-cli)
+  >
+  > 版本号：默认 1.0.0
+  >
+  > version: (1.0.0)
+  >
+  > 项目描述：可以不写也可以简单描述
+  >
+  > description: 测试初始化项目
+  >
+  > 项目入口文件：默认 index.js,可以根据自身需求更改
+  >
+  > entry point: (index.js) main.js
+  >
+  > 测试命令：可忽略
+  >
+  > test command:
+  >
+  > git 存储库地址：可忽略
+  >
+  > git repository:
+  >
+  > 关键字：可忽略
+  >
+  > keywords:
+  >
+  > 作者：可忽略
+  >
+  > author:
+  >
+  > 许可证：默认 isc
+  >
+  > license: (ISC)
+  >
+  > 上述选项可选填，一路回车
 
-    初始化完成后会输出以下确认内容，直接输入 yes 回车即可
-    ![alt text](/public/mdImage/image-2.png)
-    回车之后项目目录中会多出一个 package.json 文件，文件中会包含刚刚项目创建时输出的内容（一些基本信息），如下图：
-    ![alt text](/public/mdImage/image-3.png)
-    刚刚初始化时所填的信息都在这里，后期如果想修改可以在这里修改，至此项目初始化基本完成。
+  初始化完成后会输出以下确认内容，直接输入 yes 回车即可
+  ![alt text](/public/mdImage/image-2.png)
+  回车之后项目目录中会多出一个 package.json 文件，文件中会包含刚刚项目创建时输出的内容（一些基本信息），如下图：
+  ![alt text](/public/mdImage/image-3.png)
+  刚刚初始化时所填的信息都在这里，后期如果想修改可以在这里修改，至此项目初始化基本完成。
 
 #### 第二步技术选型
 
@@ -238,41 +238,42 @@ pnpm add --save-dev --save-exact prettier
 
 ```js
 module.exports = {
-    // 1.一行代码的最大字符数，默认是80(printWidth: <int>)
-    printWidth: 80,
-    // 2.tab宽度为2空格(tabWidth: <int>)
-    tabWidth: 2,
-    // 3.是否使用tab来缩进，我们使用空格(useTabs: <bool>)
-    useTabs: false,
-    // 4.结尾是否添加分号，false的情况下只会在一些导致ASI错误的其工况下在开头加分号，我选择无分号结尾的风格(semi: <bool>)
-    semi: false,
-    // 5.使用单引号(singleQuote: <bool>)
-    singleQuote: true,
-    // 6.object对象中key值是否加引号（quoteProps: "<as-needed|consistent|preserve>"）as-needed只有在需求要的情况下加引号，consistent是有一个需要引号就统一加，preserve是保留用户输入的引号
-    quoteProps: 'as-needed',
-    // 7.在jsx文件中的引号需要单独设置（jsxSingleQuote: <bool>）
-    jsxSingleQuote: false,
-    // 8.尾部逗号设置，es5是尾部逗号兼容es5，none就是没有尾部逗号，all是指所有可能的情况，需要node8和es2017以上的环境。（trailingComma: "<es5|none|all>"）
-    trailingComma: 'es5',
-    // 9.object对象里面的key和value值和括号间的空格(bracketSpacing: <bool>)
-    bracketSpacing: true,
-    // 10.jsx标签多行属性写法时，尖括号是否另起一行(jsxBracketSameLine: <bool>)
-    jsxBracketSameLine: false,
-    // 11.箭头函数单个参数的情况是否省略括号，默认always是总是带括号（arrowParens: "<always|avoid>"）
-    arrowParens: 'always',
-    // 12.range是format执行的范围，可以选执行一个文件的一部分，默认的设置是整个文件（rangeStart: <int>  rangeEnd: <int>）
-    rangeStart: 0,
-    rangeEnd: Infinity,
-    // 18. vue script和style标签中是否缩进,开启可能会破坏编辑器的代码折叠
-    vueIndentScriptAndStyle: false,
-    // 19.    endOfLine: "<lf|crlf|cr|auto>" 行尾换行符,默认是lf,
-    endOfLine: 'lf',
-    // 20.embeddedLanguageFormatting: "off",默认是auto,控制被引号包裹的代码是否进行格式化
-    embeddedLanguageFormatting: 'off',
+  // 1.一行代码的最大字符数，默认是80(printWidth: <int>)
+  printWidth: 80,
+  // 2.tab宽度为2空格(tabWidth: <int>)
+  tabWidth: 2,
+  // 3.是否使用tab来缩进，我们使用空格(useTabs: <bool>)
+  useTabs: false,
+  // 4.结尾是否添加分号，false的情况下只会在一些导致ASI错误的其工况下在开头加分号，我选择无分号结尾的风格(semi: <bool>)
+  semi: false,
+  // 5.使用单引号(singleQuote: <bool>)
+  singleQuote: true,
+  // 6.object对象中key值是否加引号（quoteProps: "<as-needed|consistent|preserve>"）as-needed只有在需求要的情况下加引号，consistent是有一个需要引号就统一加，preserve是保留用户输入的引号
+  quoteProps: 'as-needed',
+  // 7.在jsx文件中的引号需要单独设置（jsxSingleQuote: <bool>）
+  jsxSingleQuote: false,
+  // 8.尾部逗号设置，es5是尾部逗号兼容es5，none就是没有尾部逗号，all是指所有可能的情况，需要node8和es2017以上的环境。（trailingComma: "<es5|none|all>"）
+  trailingComma: 'es5',
+  // 9.object对象里面的key和value值和括号间的空格(bracketSpacing: <bool>)
+  bracketSpacing: true,
+  // 10.jsx标签多行属性写法时，尖括号是否另起一行(jsxBracketSameLine: <bool>)
+  jsxBracketSameLine: false,
+  // 11.箭头函数单个参数的情况是否省略括号，默认always是总是带括号（arrowParens: "<always|avoid>"）
+  arrowParens: 'always',
+  // 12.range是format执行的范围，可以选执行一个文件的一部分，默认的设置是整个文件（rangeStart: <int>  rangeEnd: <int>）
+  rangeStart: 0,
+  rangeEnd: Infinity,
+  // 18. vue script和style标签中是否缩进,开启可能会破坏编辑器的代码折叠
+  vueIndentScriptAndStyle: false,
+  // 19.    endOfLine: "<lf|crlf|cr|auto>" 行尾换行符,默认是lf,
+  endOfLine: 'lf',
+  // 20.embeddedLanguageFormatting: "off",默认是auto,控制被引号包裹的代码是否进行格式化
+  embeddedLanguageFormatting: 'off',
 }
 ```
 
 **配置:**`.prettierignore`，排除不必要的文件
+
 ```js
 *.svg
 package.json
@@ -291,9 +292,12 @@ yarn-error.log
 /public
 
 ```
+
 **添加脚本：**
+
 > 配置完成后可在`package.json`文件中的`script`字段中配置可执行脚本
-有关脚本的配置会在后续单独讲解
+> 有关脚本的配置会在后续单独讲解
+
 ```json
 "script":{
   "lint:prettier": "prettier --check \"src/**/*\" --end-of-line auto",
@@ -301,6 +305,81 @@ yarn-error.log
 }
 ```
 
-**配置：**`ESLint 代码规范校验`
+`ESLint 代码规范校验`
 
-> 了解ESLint : 
+> ESlint是一个用于识别和报告代码语法规范的工具
+> 了解ESLint : https://eslint.org/docs/latest/use/getting-started
+
+**依赖安装：**
+
+```bash
+npm install eslint eslint-plugin-vue eslint-config-prettier @babel/eslint-parser --save-dev
+yarn add eslint eslint-plugin-vue eslint-config-prettier @babel/eslint-parser --save-dev
+pnpm add eslint eslint-plugin-vue eslint-config-prettier @babel/eslint-parser --save-dev
+
+```
+
+![alt text](/public/mdImage/image-15.png)
+
+**插件安装：**
+![alt text](/public/mdImage/image-16.png)
+
+**配置：**`.eslintrc`
+
+> 了解.eslintrc配置：https://zh-hans.eslint.org/docs/latest/use/configure/configuration-files
+> https://daiwanxing.github.io/blog/articles/javascript/eslint.html
+
+```json
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "plugin:vue/vue3-recommended", "prettier"],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "sourceType": "module"
+  },
+  "rules": {
+    "vue/multi-word-component-names": "off"
+  }
+}
+```
+
+3. 关键配置项说明
+   字段 作用
+   "root" 标记为根配置，避免继承上级目录的 ESLint 配置
+   "env" 定义环境变量（如 node: true 启用 Node.js 全局变量）
+   "extends" 继承的规则集（顺序靠后的配置会覆盖前面的）
+   "parser" 主解析器，必须为 vue-eslint-parser 以解析 .vue 文件
+   "parserOptions.parser" 子解析器，处理 <script> 中的代码（JavaScript/TypeScript）
+   "rules" 自定义规则覆盖（优先级最高）
+
+**配置忽略文件：**`.eslintignore`
+
+```bash
+# 忽略整个目录
+dist/
+node_modules/
+
+# 忽略特定文件类型
+*.log
+*.md
+
+# 忽略具体文件
+src/experimental/*.js
+public/test-data.json
+```
+
+**添加脚本：**
+
+```json
+{
+  "scripts": {
+    "lint": "eslint . --ext .vue,.js,.ts --fix",
+    "lint:check": "eslint . --ext .vue,.js,.ts"
+  }
+}
+```

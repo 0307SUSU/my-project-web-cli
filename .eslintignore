@@ -1,0 +1,12 @@
+# 忽略整个目录
+dist/
+node_modules/
+build
+public
+# 忽略特定文件类型
+*.log
+*.md
+
+# 忽略具体文件
+# src/experimental/*.js
+# public/test-data.json
