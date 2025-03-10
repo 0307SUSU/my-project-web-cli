@@ -10,7 +10,19 @@
     "lint:prettier": "prettier --check \"src/**/*\" --end-of-line auto",
     "prettier": "prettier -c --write \"src/**/*\"",
     "lint:css": "stylelint 'src/**/*.{css,scss,vue}' --fix",
-    "lint": "npm run lint:css"
+    "lint": "npm run lint:css",
+    "prepare":"husky install",
+    "precommit": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+"lint-staged": {
+    "*.{js,vue}":"eslint --ext .js,.jsx,.ts,.tsx,.vue",
+    "**/*{.scss,.sass}":"stylelint --syntax scss,sass",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": ["prettier --write"]
   },
   "keywords": [],
   "author": "",
@@ -28,6 +40,8 @@
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-vue": "^10.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "postcss-html": "^1.8.0",
     "prettier": "3.5.3",
     "sass": "^1.85.1",

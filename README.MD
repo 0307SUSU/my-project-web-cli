@@ -522,4 +522,46 @@ vite.config.js
 
 `代码提交校验（Git Hook）`
 
+**安装依赖：**
+
+```bash
+npm install husky lint-staged --save-dev
+yarn add husky lint-staged --save-dev
+pnpm add husky lint-staged --save-dev
+```
+
+![alt text](/public/mdImage/image-21.png)
+
+**添加脚本：** 执行 `pnpm run prepare`
+
+```json
+"scripts": {
+    "prepare":"husky install",
+    "precommit": "lint-staged",
+  },
+"husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+"lint-staged": {
+    "*.{js,vue}":"eslint --ext .js,.jsx,.ts,.tsx,.vue",
+    "**/*{.scss,.sass}":"stylelint --syntax scss,sass",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": ["prettier --write"]
+  }
+```
+
+![alt text](/public/mdImage/image-22.png)
+命令执行完后会在目录中多出一个`.husky`目录。
+![alt text](/public/mdImage/image-23.png)
+
 `Commit Message 规范`
+
+>对commit 提交内容描述的规范，后期再做详细描述，现暂不配置
+
+
+#### 项目配置文件定义
+
+>上边项目规范化配置中已经对一些规范化的文件做了配置，下边我们将定义项目中的其它文件配置
+
+待续...
